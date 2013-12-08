@@ -1,10 +1,14 @@
 ---
+background.jpg: background-9651b9384656e8cd5e21a57cb8b37191.jpg
+background/index.jpg: background-9651b9384656e8cd5e21a57cb8b37191.jpg
+favicon.ico: favicon-35a1b03092e20d1c59b9fc112aab533b.ico
+favicon/index.ico: favicon-35a1b03092e20d1c59b9fc112aab533b.ico
 logo.png: logo-2a90deec70a5a5847e4083ba8dc20986.png
 logo/index.png: logo-2a90deec70a5a5847e4083ba8dc20986.png
-application.js: application-23a332ccfc9ad0c194ec536e639c5c50.js
-application/index.js: application-23a332ccfc9ad0c194ec536e639c5c50.js
-application.css: application-a45ac2974fc5b2504be0c4508e81afdd.css
-application/index.css: application-a45ac2974fc5b2504be0c4508e81afdd.css
+application.js: application-ea558994b23b9f4fb2d0e50ff9cadde5.js
+application/index.js: application-ea558994b23b9f4fb2d0e50ff9cadde5.js
+application.css: application-bffb728df16cb54c88f52f027414c175.css
+application/index.css: application-bffb728df16cb54c88f52f027414c175.css
 chosen-sprite.png: chosen-sprite-0b638291e3ab1e89592983b5810b9b79.png
 chosen-sprite/index.png: chosen-sprite-0b638291e3ab1e89592983b5810b9b79.png
 chosen-sprite@2x.png: chosen-sprite@2x-8fa0fb1eb347c8dc10a5381b22383ac6.png

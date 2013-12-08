@@ -1,0 +1,248 @@
+<Center>
+     <name>Colegio Spec</name>
+     <month>Diciembre</month>
+     <inform_year>2013</inform_year>
+     <year>2013</year>
+     <director>Speculus Diaz</director>
+        <Subscale name='Espacio y Mueble - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Rutinas de Cuidado Personal - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Escuchar y Hablar - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Actividades - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Interacción  - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Estructura del programa - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Padres y Personal - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Espacio y Muebles - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Rutinas del Cuidado Personal - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Lenguaje-Razonamiento - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Actividades - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Interacción  - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Estructura del programa - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Padres y Personal - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Espacio y Mueble - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Rutinas de Cuidado Personal - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Escuchar y Hablar - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Actividades - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Interacción  - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Estructura del programa - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Padres y Personal - ITERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Espacio y Muebles - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Rutinas del Cuidado Personal - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Lenguaje-Razonamiento - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Actividades - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Interacción  - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Estructura del programa - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+        <Subscale name='Padres y Personal - ECERS-R'>
+         <Score>0.0</Score>
+     </Subscale>
+      
+     <TotalScore>0.0</TotalScore>
+     
+      <Room>
+       <Name>I A</Name>
+       <Level> NN </Level>
+       <Date>2010-02-03</Date>
+       <Adults> NN </Adults>
+       <Kids>20</Kids>
+       <MKids> NN </MKids>
+       <Capacity>30</Capacity>
+       <Scale>ITERS-R</Scale>
+         <Subscale name='Espacio y Muebles'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Rutinas de cuidado personal'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Escuchar y hablar  / Lenguaje y razonamiento'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Actividades'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Interacción'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Estructura del programa'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Padres y personal'>
+           <Score>0</Score>
+         </Subscale>
+       <TotalScore>10</TotalScore>
+       </Room>
+      <Room>
+       <Name>IV C</Name>
+       <Level> NN </Level>
+       <Date>2013-12-08</Date>
+       <Adults> NN </Adults>
+       <Kids>22</Kids>
+       <MKids> NN </MKids>
+       <Capacity>33</Capacity>
+       <Scale>ITERS-R</Scale>
+         <Subscale name='Espacio y Muebles'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Rutinas de cuidado personal'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Escuchar y hablar  / Lenguaje y razonamiento'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Actividades'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Interacción'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Estructura del programa'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Padres y personal'>
+           <Score>0</Score>
+         </Subscale>
+       <TotalScore>0</TotalScore>
+       </Room>
+      <Room>
+       <Name>IV C</Name>
+       <Level> NN </Level>
+       <Date>2013-12-08</Date>
+       <Adults> NN </Adults>
+       <Kids>22</Kids>
+       <MKids> NN </MKids>
+       <Capacity>33</Capacity>
+       <Scale>ITERS-R</Scale>
+         <Subscale name='Espacio y Muebles'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Rutinas de cuidado personal'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Escuchar y hablar  / Lenguaje y razonamiento'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Actividades'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Interacción'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Estructura del programa'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Padres y personal'>
+           <Score>0</Score>
+         </Subscale>
+       <TotalScore>0</TotalScore>
+       </Room>
+      <Room>
+       <Name>II D</Name>
+       <Level> NN </Level>
+       <Date>2010-02-03</Date>
+       <Adults> NN </Adults>
+       <Kids>20</Kids>
+       <MKids> NN </MKids>
+       <Capacity>30</Capacity>
+       <Scale>ITERS-R</Scale>
+         <Subscale name='Espacio y Muebles'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Rutinas de cuidado personal'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Escuchar y hablar  / Lenguaje y razonamiento'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Actividades'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Interacción'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Estructura del programa'>
+           <Score>0</Score>
+         </Subscale>
+         <Subscale name='Padres y personal'>
+           <Score>0</Score>
+         </Subscale>
+       <TotalScore>10</TotalScore>
+       </Room></Center>
