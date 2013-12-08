@@ -1,0 +1,66 @@
+<%= form_tag receive_path do %>
+
+<%= hidden_field_tag(:evaluation_id, @evaluation.id) %> 
+
+<div class="accordion" id="accordion2">
+  <% @subscales.each_with_index do |subscale,i| %>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%=i%>">
+       <h2> <%= subscale.name %></h2>
+      </a>
+    </div>
+    <div id="collapse<%=i%>" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <% subscale.items.each_with_index do |item, i| %>
+          <h4><%=i + 1%>.- <%=item.name %> </h4>
+          <ul id="tab-<%= subscale.id %>-<%=item.id%>" class="nav nav-tabs">
+            <% item.columns.each do |column| %>
+              <% if column.puntuation == 1 %>
+                <li class="active"><a href=<%= "#" + subscale.id.to_s + "-" + item.id.to_s + "-" + column.id.to_s %>><%= column.puntuation %></a></li>
+              <% else %>
+                <li class="disabled"><a href=<%= "#" + subscale.id.to_s + "-" + item.id.to_s + "-" + column.id.to_s %>><%= column.puntuation %></a></li>
+              <% end %>
+            <% end %>
+          </ul>
+          <div id=<%= "#" + subscale.id.to_s + "-" + item.id.to_s + "-content"%> class="tab-content">
+            <% item.columns.each do |column| %>
+              <% if column.puntuation == 1 %>
+                <div class="tab-pane fade in active" id=<%=subscale.id.to_s + "-" + item.id.to_s + "-" + column.id.to_s %>>
+                  <ul>
+                    <% column.indicators.each do |indicator| %>
+                      <li><%= "#{column.puntuation}.#{indicator.indicator_number} #{indicator.name}" %></li>
+                      <input type="radio" class = "item-<%= item.id.to_s %>-columna-<%= column.id.to_s %>" name ="evaluation[<%= indicator.id %>]" id="evaluation[<%= indicator.id %>]_si" onClick="click_radio_button(<%= item.id %>, <%= column.id %>, <%= subscale.id %>, true);" value=true />
+                      Si
+                      <input type="radio" class = "item-<%= item.id.to_s %>-columna-<%= column.id.to_s %>" name ="evaluation[<%= indicator.id %>]" id="evaluation[<%= indicator.id %>]_no" onClick="click_radio_button(<%= item.id %>, <%= column.id %>, <%= subscale.id %>, true);" value=false />
+                      No
+                    <% end %>
+                  </ul>
+                </div>
+              <% else %>
+                <div class="tab-pane fade" id=<%=subscale.id.to_s + "-" + item.id.to_s + "-" + column.id.to_s %>>
+                  <ul>
+                    <% column.indicators.each do |indicator| %>
+                      <li><%= "#{column.puntuation}.#{indicator.indicator_number} #{indicator.name}" %></li>
+                      <input type="radio" class = "item-<%= item.id.to_s %>-columna-<%= column.id.to_s %>" name ="evaluation[<%= indicator.id %>]" id="evaluation[<%= indicator.id %>]_si" onClick="click_radio_button(<%= item.id %>, <%= column.id %>, <%= subscale.id %>, false);" value=true />
+                      Si
+                      <input type="radio" class = "item-<%= item.id.to_s %>-columna-<%= column.id.to_s %>" name ="evaluation[<%= indicator.id %>]" id="evaluation[<%= indicator.id %>]_no" onClick="click_radio_button(<%= item.id %>, <%= column.id %>, <%= subscale.id %>, false);" value=false />
+                      No
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+          <textarea rows="4" cols="100"></textarea>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<%= submit_tag("Enviar") %>
+
+<% end %>
+

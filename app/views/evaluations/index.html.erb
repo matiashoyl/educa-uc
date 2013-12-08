@@ -1,0 +1,87 @@
+<%- model_class = Evaluation -%>
+<div class="page-header">
+  <h1>Evaluaciones</h1>
+</div>
+<table class="table table-striped" style="width:auto; margin: 0 auto;">
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Establecimiento</th>
+      <th>Sala</th>
+      <th>Fecha</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= User.find(evaluation.user_id).name %></td>
+        <td><%= School.find(evaluation.school_id).name %></td>
+        <td><%= evaluation.room %></td>
+        <td><%= evaluation.evaluation_date %></td>
+        <td>
+          <a href="#mostrarEvaluacion-<%= evaluation.id %>" role="button" class="btn btn-mini" data-toggle="modal">Mostrar</a>
+          <%= link_to 'Eliminar',
+                      evaluation_path(evaluation),
+                      :method => :delete,
+                      :class => 'btn btn-mini btn-danger' %>
+          <%= link_to 'Generar Informe',
+                      generate_inform_path(evaluation), :class => 'btn btn-mini' %>
+        </td>
+      </tr>
+      <div id="mostrarEvaluacion-<%= evaluation.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Evaluación <%= evaluation.id %></h3>
+        </div>
+        <div class="modal-body">
+          <p>
+            <strong><%= model_class.human_attribute_name(:user_id) %>:</strong>
+            <%= User.find(evaluation.user_id).name %></br>
+            <strong><%= model_class.human_attribute_name(:school_id) %>:</strong>
+            <%= School.find(evaluation.school_id).name %></br>
+            <strong><%= model_class.human_attribute_name(:personal_members_present) %>:</strong>
+            <%= evaluation.personal_members_present %></br>
+            <strong><%= model_class.human_attribute_name(:number_kids) %>:</strong>
+            <%= evaluation.number_kids %></br>
+            <strong><%= model_class.human_attribute_name(:max_number_kids) %>:</strong>
+            <%= evaluation.max_number_kids %></br>
+            <strong><%= model_class.human_attribute_name(:evaluation_date) %>:</strong>
+            <%= evaluation.evaluation_date %></br>
+            <strong><%= model_class.human_attribute_name(:number_kids_disability) %>:</strong>
+            <%= evaluation.number_kids_disability %></br>
+            <strong><%= model_class.human_attribute_name(:physical_disability) %>:</strong>
+            <%= evaluation.physical_disability %></br>
+            <strong><%= model_class.human_attribute_name(:cognitive_disability) %>:</strong>
+            <%= evaluation.cognitive_disability %></br>
+            <strong><%= model_class.human_attribute_name(:social_disability) %>:</strong>
+            <%= evaluation.social_disability %></br>
+            <strong><%= model_class.human_attribute_name(:other_disability) %>:</strong>
+            <%= evaluation.other_disability %></br>
+            <strong><%= model_class.human_attribute_name(:min_birth_date) %>:</strong>
+            <%= evaluation.min_birth_date %></br>
+            <strong><%= model_class.human_attribute_name(:max_birth_date) %>:</strong>
+            <%= evaluation.max_birth_date %></br>
+            <strong><%= model_class.human_attribute_name(:start_time) %>:</strong>
+            <%= evaluation.start_time %></br>
+            <strong><%= model_class.human_attribute_name(:finish_time) %>:</strong>
+            <%= evaluation.finish_time %></br>
+            <strong><%= model_class.human_attribute_name(:scale_id) %>:</strong>
+            <%= evaluation.scale_id %></br>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+          <%= link_to 'Generar Informe',
+                      generate_inform_path(evaluation), :class => 'btn' %>
+        </div>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'Nueva Evaluación', new_evaluation_path, :class => 'btn btn-primary' %>
+
+<%= link_to 'Base de Datos Excel', evaluations_path(format: "xls"), :class => 'btn btn-primary' %>
+
+

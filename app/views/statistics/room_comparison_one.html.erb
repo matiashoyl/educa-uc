@@ -1,0 +1,52 @@
+
+
+<%= form_tag show_graphic_two_path, :method => :post, :remote => true do %>
+<div class="row">
+  <div class="span2">
+    <label>Establecimiento: </label>
+    
+     <%= select(:school, :school_id, options_from_collection_for_select(@schools, :id, :name), { :include_blank => false}, {:class => "chzn-select", :id => "school", :prompt => "Seleccione Establecimiento"}) %>
+  </div>
+</div>
+<br>
+<div id="room_select">
+  <%= render 'update_rooms' %>
+</div>
+<br>
+
+<!--<div class="form_row">
+    <label for="theme">Seleccione la escala de comparación:</label>
+    <span><%= radio_button_tag 'theme', '1' %> ITERS-R &nbsp &nbsp</span>
+    <span><%= radio_button_tag 'theme', '2' %> ECERS-R &nbsp &nbsp</span>
+    <span><%= radio_button_tag 'theme', '3' %> Ambas</span>
+</div>-->
+
+<div class="row">
+  <div class="span2">
+    <label>Seleccione un item: </label>
+    
+     <%= select(:item, :school_id, options_from_collection_for_select(@items, :first, :last), { :include_blank => false}, {:class => "chzn-select", :id => "item", :prompt => "Seleccione item"}) %>
+  </div>
+</div>
+
+
+<br>
+<%= submit_tag("Next") %>
+<% end %>
+
+
+<div id="graph">
+	
+</div>
+
+<script type="text/javascript">
+    $("#school").change(function() {
+   var dataString = 'school_id=' + $("#school").val();
+   $.ajax({
+    type: "GET",
+    url: "/update_rooms",
+    data: dataString
+   });
+   
+});
+</script>

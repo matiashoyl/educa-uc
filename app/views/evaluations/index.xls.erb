@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">User</Data></Cell>
+        <Cell><Data ss:Type="String">School</Data></Cell>
+        <Cell><Data ss:Type="String">Personal members present</Data></Cell>
+        <Cell><Data ss:Type="String">Number kids</Data></Cell>
+        <Cell><Data ss:Type="String">Max number kids</Data></Cell>
+        <Cell><Data ss:Type="String">Evaluation date</Data></Cell>
+        <Cell><Data ss:Type="String">Number kids disability</Data></Cell>
+        <Cell><Data ss:Type="String">Physical disability</Data></Cell>
+        <Cell><Data ss:Type="String">Cognitive disability</Data></Cell>
+        <Cell><Data ss:Type="String">Social disability</Data></Cell>
+        <Cell><Data ss:Type="String">Other disability</Data></Cell>
+        <Cell><Data ss:Type="String">Min birth date</Data></Cell>
+        <Cell><Data ss:Type="String">Max birth date</Data></Cell>
+        <Cell><Data ss:Type="String">Start time</Data></Cell>
+        <Cell><Data ss:Type="String">Finish time</Data></Cell>
+        <Cell><Data ss:Type="String">Scale</Data></Cell>
+      </Row>
+    <% @evaluations.each do |evaluations| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= evaluations.user.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.school.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.personal_members_present %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.number_kids %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.max_number_kids %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.evaluation_date %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.number_kids_disability %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.physical_disability %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.cognitive_disability %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.social_disability %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.other_disability %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.min_birth_date %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.max_birth_date %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.start_time %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.finish_time %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= evaluations.scale_id %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

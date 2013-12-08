@@ -1,0 +1,7 @@
+<div class="row">
+	<div class="span2">
+		<label>Seleccione una sala: </label>
+
+		<%= select(:room, :school_id, @rooms, { :include_blank => false}, {multiple: true, :class => "chzn-select", :id => "room", :prompt => "Seleccione sala"}) %>
+	</div>
+</div>

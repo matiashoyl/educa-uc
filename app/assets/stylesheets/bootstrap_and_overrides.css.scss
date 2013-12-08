@@ -1,0 +1,15 @@
+@import "bootstrap";
+body { padding-top: 60px; }
+@import "bootstrap-responsive";
+
+body {
+	background: #515151 url('background.jpg') fixed no-repeat right top;
+}
+
+a:visited {
+color: lightblue;
+}
+
+.content{
+	margin: 40px 40px;
+}

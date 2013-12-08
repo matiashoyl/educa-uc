@@ -1,0 +1,32 @@
+<%= simple_form_for @evaluation, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+  <%= f.label :school_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select :school_id, options_from_collection_for_select(School.all, :id, :name),{} ,:class => "chzn-select" %>
+    </div>
+  </div>
+  <%= f.input :room, label: 'Clase' %>
+  <%= f.input :personal_members_present, label: 'Número de Personal' %>
+  <%= f.input :number_kids, label: 'Número de alumnos' %>
+  <%= f.input :max_number_kids, label: 'Máximo de niños' %>
+  <%= f.input :evaluation_date, label: 'Fecha de evaluación', :start_year => (Time.now - 12.year).year %>
+  <%= f.input :number_kids_disability, label: 'Número de niños con discapacidad' %>
+  <%= f.input :physical_disability, label: 'Discapacidad Física' %>
+  <%= f.input :cognitive_disability, label: 'Discapacidad Cognitiva' %>
+  <%= f.input :social_disability, label: 'Discapacidad Social' %>
+  <%= f.input :other_disability, label: 'Otra discapacidad' %>
+  <%= f.input :min_birth_date, label: 'Fecha de nacimiento máxima', :start_year => (Time.now - 12.year).year  %>
+  <%= f.input :max_birth_date, label: 'Fecha de nacimiento mínima', :start_year => (Time.now - 12.year).year  %>
+  <%= f.input :start_time, label: 'Tiempo de comienzo', :default => Time.now %>
+  <div class="control-group">
+    <%= f.label :scale_id, :class => 'control-label', label: 'Escala' %>
+    <div class="controls">
+      <%= f.select :scale_id, options_from_collection_for_select(Scale.all, :id, :name),{} ,:class => "chzn-select" %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Crear Evaluación',  :class => 'btn-primary' %>
+    <%= link_to 'Cancelar',schools_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+<%= simple_form_for @school, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name, label: 'Nombre' %>
+  <%= f.input :director, label: 'Director' %>
+  <%= f.input :created_at_year, label: 'Año de creación' %>
+  <div class="form-actions">
+    <%= f.button :submit, 'Crear Establecimiento',  :class => 'btn-primary' %>
+    <%= link_to 'Cancelar',schools_path, :class => 'btn' %>
+  </div>
+<% end %>

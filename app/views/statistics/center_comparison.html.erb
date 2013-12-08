@@ -1,0 +1,28 @@
+<%= form_tag show_graphic_one_path, :method => :post, :remote => true do %>
+<div class="form_row">
+    <label for="theme">Elija la escala de comparación:</label><br>
+    <span><%= radio_button_tag 'theme', '1' %> ITERS-R &nbsp &nbsp</span>
+    <span><%= radio_button_tag 'theme', '2' %> ECERS-R &nbsp &nbsp</span>
+    <span><%= radio_button_tag 'theme', '3' %> Ambas</span>
+</div>
+
+<br><br>
+<p>Elija los establecimientos que desea comparar: </p>
+<br>
+<div class="row">
+  <div class="span2">
+    <label>Establecimientos: </label>
+    
+     <%= select(:school, :school_id, options_from_collection_for_select(@schools, :id, :name), { :include_blank => false}, {multiple: true, :class => "chzn-select", :id => "school", :prompt => "Seleccione Establecimiento"}) %>
+  </div>
+</div>
+
+<br>
+
+<%= submit_tag("Next") %>
+<% end %>
+
+
+<div id="graph">
+	
+</div>
