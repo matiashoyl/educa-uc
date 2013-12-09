@@ -26,4 +26,5 @@ Rails3BootstrapDeviseCancan::Application.routes.draw do
   match "/update_rooms", to: "statistics#update_rooms"
   match "/show_graphic_one", to: "statistics#show_graphic_one", :as => :show_graphic_one
   match "/show_graphic_two", to: "statistics#show_graphic_two", :as => :show_graphic_two
+
 end
