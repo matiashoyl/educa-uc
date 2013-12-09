@@ -1,0 +1,236 @@
+have_library: checking for socket() in -lsocket... -------------------- no
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'      -lruby-static  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(void) {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'      -lruby-static -lsocket  -lpthread -ldl -lobjc "
+conftest.c:6:57: error: use of undeclared identifier 'socket'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))socket; return 0; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { void ((*volatile p)()); p = (void ((*)()))socket; return 0; }
+/* end */
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'      -lruby-static -lsocket  -lpthread -ldl -lobjc "
+conftest.c:6:15: warning: implicit declaration of function 'socket' is invalid in C99 [-Wimplicit-function-declaration]
+int t(void) { socket(); return 0; }
+              ^
+1 warning generated.
+ld: library not found for -lsocket
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { socket(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for gethostbyname() in -lnsl... -------------------- no
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'      -lruby-static -lnsl  -lpthread -ldl -lobjc "
+conftest.c:6:57: error: use of undeclared identifier 'gethostbyname'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))gethostbyname; return 0; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { void ((*volatile p)()); p = (void ((*)()))gethostbyname; return 0; }
+/* end */
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'      -lruby-static -lnsl  -lpthread -ldl -lobjc "
+conftest.c:6:15: warning: implicit declaration of function 'gethostbyname' is invalid in C99 [-Wimplicit-function-declaration]
+int t(void) { gethostbyname(); return 0; }
+              ^
+1 warning generated.
+ld: library not found for -lnsl
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { gethostbyname(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for atan() in -lm... -------------------- yes
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'      -lruby-static -lm  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { void ((*volatile p)()); p = (void ((*)()))atan; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for inflate() in -lz... -------------------- yes
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'     -lm  -lruby-static -lz -lm  -lpthread -ldl -lobjc "
+conftest.c:6:57: error: use of undeclared identifier 'inflate'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))inflate; return 0; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { void ((*volatile p)()); p = (void ((*)()))inflate; return 0; }
+/* end */
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'     -lm  -lruby-static -lz -lm  -lpthread -ldl -lobjc "
+conftest.c:6:15: warning: implicit declaration of function 'inflate' is invalid in C99 [-Wimplicit-function-declaration]
+int t(void) { inflate(); return 0; }
+              ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { inflate(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for iconv_open() in -liconv... -------------------- yes
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'     -lz -lm  -lruby-static -liconv -lz -lm  -lpthread -ldl -lobjc "
+conftest.c:6:57: error: use of undeclared identifier 'iconv_open'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { void ((*volatile p)()); p = (void ((*)()))iconv_open; return 0; }
+/* end */
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'     -lz -lm  -lruby-static -liconv -lz -lm  -lpthread -ldl -lobjc "
+conftest.c:6:15: warning: implicit declaration of function 'iconv_open' is invalid in C99 [-Wimplicit-function-declaration]
+int t(void) { iconv_open(); return 0; }
+              ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { iconv_open(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for xmlParseDoc() in -lxml2... -------------------- yes
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'     -lxml2 -liconv -lz -lm  -lruby-static -lxml2 -lxml2 -liconv -lz -lm  -lpthread -ldl -lobjc "
+conftest.c:6:57: error: use of undeclared identifier 'xmlParseDoc'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+/* end */
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'     -lxml2 -liconv -lz -lm  -lruby-static -lxml2 -lxml2 -liconv -lz -lm  -lpthread -ldl -lobjc "
+conftest.c:6:15: warning: implicit declaration of function 'xmlParseDoc' is invalid in C99 [-Wimplicit-function-declaration]
+int t(void) { xmlParseDoc(); return 0; }
+              ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main(void) {return 0;}
+5: extern int t(void);
+6: int t(void) { xmlParseDoc(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for libxml/xmlversion.h... -------------------- yes
+
+"clang -E -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_io_bufwrite() in ruby/io.h... -------------------- yes
+
+"clang -o conftest -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/x86_64-darwin12.3.0 -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0/ruby/backward -I/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include/ruby-2.0.0 -I. -I'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/include'  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 conftest.c  -L. -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib -L. -L'/Users/matiashoyl/.rbenv/versions/2.0.0-p0/lib'     -lxml2 -lxml2 -liconv -lz -lm  -lruby-static -lxml2 -lxml2 -liconv -lz -lm  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/io.h>
+4: 
+5: /*top*/
+6: int main(void) {return 0;}
+7: extern int t(void);
+8: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_io_bufwrite; return 0; }
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+1: #ifndef EXTCONF_H
+2: #define EXTCONF_H
+3: #define HAVE_ZLIB_H 1
+4: #define HAVE_LIBXML_XMLVERSION_H 1
+5: #define HAVE_RB_IO_BUFWRITE 1
+6: #endif
+/* end */
+
