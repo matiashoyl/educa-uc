@@ -2,7 +2,11 @@ require 'spec_helper'
 
 describe School do
 	before :each do
-		@school = School.new(name: "Colegio Spec", director: "Speculus Diaz", created_at_year: 1995)
+		@school = School.new(
+			name: "Colegio Spec", 
+			director: "Speculus Diaz", 
+			created_at_year: 1995
+		)
 	end
 	describe "#new" do
 		it "toma tres parámetros y devuelve una instancia de School" do

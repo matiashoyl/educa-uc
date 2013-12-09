@@ -25,7 +25,7 @@ describe Item do
 	    end
 	end
 	describe "#subscale_id" do
-		it "debe tener el cosubscale_idlumn_id correcto" do
+		it "debe tener el subscale_id correcto" do
 			@item.subscale_id.should eql 1
 		end
 	end
